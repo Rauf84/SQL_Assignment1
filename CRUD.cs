@@ -7,6 +7,10 @@ namespace SQL_Assignment1
 {
     class CRUD
     {
+        /// <summary>
+        /// Skapar ett objekt i tabellen
+        /// </summary>
+        /// <param name="dtname">Tabellnamn</param>
         public static void CreateObject(string dtname)
         {
             string sqlcom = "";
@@ -42,6 +46,11 @@ namespace SQL_Assignment1
             }
         }
 
+        /// <summary>
+        /// Raderar ett objekt
+        /// </summary>
+        /// <param name="dtname">Tabellnamn</param>
+        /// <param name="customerID">ID nummer som ska raderas</param>
         public static void DeleteObject(string dtname, string customerID)
         {
             Database.ConnectionString = String.Format(Database.ConnectionAddr, Database.dbname);
@@ -61,6 +70,11 @@ namespace SQL_Assignment1
                 Console.WriteLine(ex);
             }
         }
+
+        /// <summary>
+        /// Ändrar ett värde i tabellen
+        /// </summary>
+        /// <param name="dtname">tabellnamn</param>
         public static void ChangeObject(string dtname)
         {
             Console.Write("Vilket objekt vill du ändra, ID: ");
